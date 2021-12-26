@@ -23,8 +23,14 @@ function onFormInput(event) {
 
 function onFormSubmit(event) {
   event.preventDefault();
+
+  const submitData = localStorage.getItem(STORAGE_KEY);
+  const parsedSubmitData = JSON.parse(submitData);
+  if (parsedSubmitData) {
+    console.log(parsedSubmitData);
+  }
+
   event.currentTarget.reset();
-  console.log(formData);
   localStorage.removeItem(STORAGE_KEY);
 }
 
