@@ -6,7 +6,6 @@ const player = new Player(iframe);
 
 function savedCurrentTime(e) {
   localStorage.setItem('videoplayer-current-time', e.seconds);
-  console.log(e.seconds);
 }
 
 const throttledSavedCurrentTime = throttle(savedCurrentTime, 1000);
